@@ -22,8 +22,8 @@ import (
 )
 
 const (
-	resourcePrefix = "template"
-	modulePath     = "github.com/crossplane-contrib/provider-jet-template"
+	resourcePrefix = "myrasec"
+	modulePath     = "github.com/crossplane-contrib/provider-jet-myrasec"
 )
 
 // GetProvider returns provider configuration
