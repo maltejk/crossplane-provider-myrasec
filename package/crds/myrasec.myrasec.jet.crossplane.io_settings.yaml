@@ -1,0 +1,357 @@
+apiVersion: apiextensions.k8s.io/v1
+kind: CustomResourceDefinition
+metadata:
+  annotations:
+    controller-gen.kubebuilder.io/version: v0.6.2
+  creationTimestamp: null
+  name: settings.myrasec.myrasec.jet.crossplane.io
+spec:
+  group: myrasec.myrasec.jet.crossplane.io
+  names:
+    categories:
+    - crossplane
+    - managed
+    - myrasecjet
+    kind: Settings
+    listKind: SettingsList
+    plural: settings
+    singular: settings
+  scope: Cluster
+  versions:
+  - additionalPrinterColumns:
+    - jsonPath: .status.conditions[?(@.type=='Ready')].status
+      name: READY
+      type: string
+    - jsonPath: .status.conditions[?(@.type=='Synced')].status
+      name: SYNCED
+      type: string
+    - jsonPath: .metadata.annotations.crossplane\.io/external-name
+      name: EXTERNAL-NAME
+      type: string
+    - jsonPath: .metadata.creationTimestamp
+      name: AGE
+      type: date
+    name: v1alpha1
+    schema:
+      openAPIV3Schema:
+        description: Settings is the Schema for the Settingss API
+        properties:
+          apiVersion:
+            description: 'APIVersion defines the versioned schema of this representation
+              of an object. Servers should convert recognized schemas to the latest
+              internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources'
+            type: string
+          kind:
+            description: 'Kind is a string value representing the REST resource this
+              object represents. Servers may infer this from the endpoint the client
+              submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds'
+            type: string
+          metadata:
+            type: object
+          spec:
+            description: SettingsSpec defines the desired state of Settings
+            properties:
+              deletionPolicy:
+                default: Delete
+                description: DeletionPolicy specifies what will happen to the underlying
+                  external when this managed resource is deleted - either "Delete"
+                  or "Orphan" the external resource.
+                enum:
+                - Orphan
+                - Delete
+                type: string
+              forProvider:
+                properties:
+                  accessLog:
+                    description: Activate separated access log
+                    type: boolean
+                  antibotPostFlood:
+                    description: Detection of POST floods by using a JavaScript based
+                      puzzle.
+                    type: boolean
+                  antibotPostFloodThreshold:
+                    description: This parameter determines the frequency how often
+                      the puzzle has to be solved. The higher the value the less likely
+                      the puzzle needs to be solved.
+                    format: int64
+                    type: integer
+                  antibotProofOfWork:
+                    description: Detection of valid clients by using a JavaScript
+                      based puzzle.
+                    type: boolean
+                  antibotProofOfWorkThreshold:
+                    description: This parameter determines the frequency how often
+                      the puzzle has to be solved. The higher the value the less likely
+                      the puzzle needs to be solved.
+                    format: int64
+                    type: integer
+                  balancingMethod:
+                    description: Specifies with which method requests are balanced
+                      between upstream servers.
+                    type: string
+                  blockNotWhitelisted:
+                    description: Block all IPs, which are not whitelisted.
+                    type: boolean
+                  blockTorNetwork:
+                    description: Block traffic from the TOR network.
+                    type: boolean
+                  cacheEnabled:
+                    description: Turn caching on or off.
+                    type: boolean
+                  cacheRevalidate:
+                    description: Enable stale cache item revalidation.
+                    type: boolean
+                  cdn:
+                    description: Use subdomain as Content Delivery Node (CDN).
+                    type: boolean
+                  clientMaxBodySize:
+                    description: Sets the maximum allowed size of the client request
+                      body, specified in the “Content-Length” request header field.
+                      Maximum 100MB.
+                    format: int64
+                    type: integer
+                  diffieHellmanExchange:
+                    description: The Diffie-Hellman key exchange parameter length.
+                    format: int64
+                    type: integer
+                  enableOriginSni:
+                    description: Enable or disable origin SNI.
+                    type: boolean
+                  forwardedForReplacement:
+                    description: Set your own X-Forwarded-For header.
+                    type: string
+                  hsts:
+                    description: HSTS Strict Transport Security (HSTS).
+                    type: boolean
+                  hstsIncludeSubdomains:
+                    description: HSTS includeSubDomains directive.
+                    type: boolean
+                  hstsMaxAge:
+                    description: HSTS max-age.
+                    format: int64
+                    type: integer
+                  hstsPreload:
+                    description: HSTS preload directive.
+                    type: boolean
+                  httpOriginPort:
+                    description: Allows to set a port for communication with origin
+                      via HTTP.
+                    format: int64
+                    type: integer
+                  ignoreNocache:
+                    description: 'If activated, no-cache headers (Cache-Control: [private|no-store|no-cache])
+                      will be ignored.'
+                    type: boolean
+                  imageOptimization:
+                    description: Optimization of images.
+                    type: boolean
+                  ipv6Active:
+                    description: Allow connections via IPv6 to your systems.
+                    type: boolean
+                  limitAllowedHttpMethod:
+                    description: Not selected HTTP methods will be blocked.
+                    items:
+                      type: string
+                    type: array
+                  limitTlsVersion:
+                    description: Only selected TLS versions will be used.
+                    items:
+                      type: string
+                    type: array
+                  logFormat:
+                    description: Use a different log format.
+                    type: string
+                  monitoringAlertThreshold:
+                    description: Errors per minute that must occur until a report
+                      is sent.
+                    format: int64
+                    type: integer
+                  monitoringContactEmail:
+                    description: Email addresses, to which monitoring emails should
+                      be send. Multiple addresses are separated with a space.
+                    type: string
+                  monitoringSendAlert:
+                    description: Enables / disables the upstream error reporting.
+                    type: boolean
+                  myraSslHeader:
+                    description: Activates the X-Myra-SSL Header.
+                    type: boolean
+                  nextUpstream:
+                    description: Specifies the error that mark the current upstream
+                      as "down".
+                    items:
+                      type: string
+                    type: array
+                  onlyHttps:
+                    description: Shall the origin server always be requested via HTTPS?
+                    type: boolean
+                  originConnectionHeader:
+                    description: Connection header.
+                    type: string
+                  proxyCacheBypass:
+                    description: Name of the cookie which forces Myra to deliver the
+                      response not from cache.
+                    type: string
+                  proxyCacheStale:
+                    description: Determines in which cases a stale cached response
+                      can be used when an error occurs.
+                    items:
+                      type: string
+                    type: array
+                  proxyConnectTimeout:
+                    description: Timeout for establishing a connection to the upstream
+                      server.
+                    format: int64
+                    type: integer
+                  proxyReadTimeout:
+                    description: Timeout for reading the upstream response.
+                    format: int64
+                    type: integer
+                  requestLimitBlock:
+                    description: Show CAPTCHA after exceeding the configured request
+                      limit.
+                    type: string
+                  requestLimitLevel:
+                    description: Sets how many requests are allowed from an IP per
+                      minute.
+                    format: int64
+                    type: integer
+                  requestLimitReport:
+                    description: If activated, an email will be send containing blocked
+                      ip addresses that exceeded the configured request limit.
+                    type: boolean
+                  requestLimitReportEmail:
+                    description: Email addresses, to which request limit emails should
+                      be send. Multiple addresses are separated with a space.
+                    type: string
+                  rewrite:
+                    description: Enable the JavaScript optimization.
+                    type: boolean
+                  sourceProtocol:
+                    description: Protocol to query the origin server.
+                    type: string
+                  spdy:
+                    description: Activates the SPDY protocol.
+                    type: boolean
+                  sslOriginPort:
+                    description: Allows to set a port for communication with origin
+                      via SSL.
+                    format: int64
+                    type: integer
+                  subdomainName:
+                    description: The Subdomain for the Settings.
+                    type: string
+                  wafEnable:
+                    description: Enables / disables the Web Application Firewall.
+                    type: boolean
+                  wafLevelsEnable:
+                    description: Level of applied WAF rules.
+                    items:
+                      type: string
+                    type: array
+                  wafPolicy:
+                    description: Default policy for the Web Application Firewall in
+                      case of rule error.
+                    type: string
+                required:
+                - subdomainName
+                type: object
+              providerConfigRef:
+                default:
+                  name: default
+                description: ProviderConfigReference specifies how the provider that
+                  will be used to create, observe, update, and delete this managed
+                  resource should be configured.
+                properties:
+                  name:
+                    description: Name of the referenced object.
+                    type: string
+                required:
+                - name
+                type: object
+              providerRef:
+                description: 'ProviderReference specifies the provider that will be
+                  used to create, observe, update, and delete this managed resource.
+                  Deprecated: Please use ProviderConfigReference, i.e. `providerConfigRef`'
+                properties:
+                  name:
+                    description: Name of the referenced object.
+                    type: string
+                required:
+                - name
+                type: object
+              writeConnectionSecretToRef:
+                description: WriteConnectionSecretToReference specifies the namespace
+                  and name of a Secret to which any connection details for this managed
+                  resource should be written. Connection details frequently include
+                  the endpoint, username, and password required to connect to the
+                  managed resource.
+                properties:
+                  name:
+                    description: Name of the secret.
+                    type: string
+                  namespace:
+                    description: Namespace of the secret.
+                    type: string
+                required:
+                - name
+                - namespace
+                type: object
+            required:
+            - forProvider
+            type: object
+          status:
+            description: SettingsStatus defines the observed state of Settings.
+            properties:
+              atProvider:
+                properties:
+                  id:
+                    type: string
+                type: object
+              conditions:
+                description: Conditions of the resource.
+                items:
+                  description: A Condition that may apply to a resource.
+                  properties:
+                    lastTransitionTime:
+                      description: LastTransitionTime is the last time this condition
+                        transitioned from one status to another.
+                      format: date-time
+                      type: string
+                    message:
+                      description: A Message containing details about this condition's
+                        last transition from one status to another, if any.
+                      type: string
+                    reason:
+                      description: A Reason for this condition's last transition from
+                        one status to another.
+                      type: string
+                    status:
+                      description: Status of this condition; is it currently True,
+                        False, or Unknown?
+                      type: string
+                    type:
+                      description: Type of this condition. At most one of each condition
+                        type may apply to a resource at any point in time.
+                      type: string
+                  required:
+                  - lastTransitionTime
+                  - reason
+                  - status
+                  - type
+                  type: object
+                type: array
+            type: object
+        required:
+        - spec
+        type: object
+    served: true
+    storage: true
+    subresources:
+      status: {}
+status:
+  acceptedNames:
+    kind: ""
+    plural: ""
+  conditions: []
+  storedVersions: []
