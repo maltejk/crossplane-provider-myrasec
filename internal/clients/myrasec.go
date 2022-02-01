@@ -31,16 +31,16 @@ import (
 )
 
 const (
-	apiKey    = "user"
-	apiSecret = "password"
+	apiKey    = "api_key"
+	apiSecret = "secret"
 
 	// MyraSec credentials environment variable names
-	envAPIKey    = "MYRASEC_API_KEY"
-	envAPISecret = "MYRASEC_API_SECRET"
+	envAPIKey    = "API_KEY"
+	envAPISecret = "SECRET"
 )
 
 const (
-	fmtEnvVar = "%s=%s"
+	fmtEnvVar = "%s%s"
 
 	// error messages
 	errNoProviderConfig     = "no providerConfigRef provided"
@@ -91,5 +91,6 @@ func TerraformSetupBuilder(version, providerSource, providerVersion string) terr
 			fmt.Sprintf(fmtEnvVar, envAPISecret, myrasecCreds[apiSecret]),
 		}
 		return ps, nil
+
 	}
 }
