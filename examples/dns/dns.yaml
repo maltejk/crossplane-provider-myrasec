@@ -1,0 +1,12 @@
+apiVersion: dns.myrasec.jet.crossplane.io/v1alpha1
+kind: Record
+metadata:
+  name: example
+spec:
+  forProvider:
+    domainName: example.com
+    recordType: A
+    ttl: 1337
+    value: 1.2.3.4
+  providerConfigRef:
+    name: default
