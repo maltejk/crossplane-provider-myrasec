@@ -25,15 +25,15 @@ import (
 	tjconfig "github.com/crossplane/terrajet/pkg/config"
 	"github.com/crossplane/terrajet/pkg/terraform"
 
-	setting "github.com/crossplane-contrib/provider-jet-myrasec/internal/controller/cache/setting"
-	record "github.com/crossplane-contrib/provider-jet-myrasec/internal/controller/dns/record"
-	filter "github.com/crossplane-contrib/provider-jet-myrasec/internal/controller/ip/filter"
-	domain "github.com/crossplane-contrib/provider-jet-myrasec/internal/controller/myrasec/domain"
-	ratelimit "github.com/crossplane-contrib/provider-jet-myrasec/internal/controller/myrasec/ratelimit"
-	redirect "github.com/crossplane-contrib/provider-jet-myrasec/internal/controller/myrasec/redirect"
-	settings "github.com/crossplane-contrib/provider-jet-myrasec/internal/controller/myrasec/settings"
-	providerconfig "github.com/crossplane-contrib/provider-jet-myrasec/internal/controller/providerconfig"
-	rule "github.com/crossplane-contrib/provider-jet-myrasec/internal/controller/waf/rule"
+	setting "github.com/maltejk/provider-jet-myrasec/internal/controller/cache/setting"
+	record "github.com/maltejk/provider-jet-myrasec/internal/controller/dns/record"
+	filter "github.com/maltejk/provider-jet-myrasec/internal/controller/ip/filter"
+	domain "github.com/maltejk/provider-jet-myrasec/internal/controller/myrasec/domain"
+	ratelimit "github.com/maltejk/provider-jet-myrasec/internal/controller/myrasec/ratelimit"
+	redirect "github.com/maltejk/provider-jet-myrasec/internal/controller/myrasec/redirect"
+	settings "github.com/maltejk/provider-jet-myrasec/internal/controller/myrasec/settings"
+	providerconfig "github.com/maltejk/provider-jet-myrasec/internal/controller/providerconfig"
+	rule "github.com/maltejk/provider-jet-myrasec/internal/controller/waf/rule"
 )
 
 // Setup creates all controllers with the supplied logger and adds them to

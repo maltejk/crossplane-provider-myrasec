@@ -1,4 +1,4 @@
-module github.com/crossplane-contrib/provider-jet-myrasec
+module github.com/maltejk/provider-jet-myrasec
 
 go 1.16
 

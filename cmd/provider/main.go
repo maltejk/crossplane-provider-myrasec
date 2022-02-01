@@ -28,10 +28,10 @@ import (
 	ctrl "sigs.k8s.io/controller-runtime"
 	"sigs.k8s.io/controller-runtime/pkg/log/zap"
 
-	"github.com/crossplane-contrib/provider-jet-myrasec/apis"
-	pconfig "github.com/crossplane-contrib/provider-jet-myrasec/config"
-	"github.com/crossplane-contrib/provider-jet-myrasec/internal/clients"
-	"github.com/crossplane-contrib/provider-jet-myrasec/internal/controller"
+	"github.com/maltejk/provider-jet-myrasec/apis"
+	pconfig "github.com/maltejk/provider-jet-myrasec/config"
+	"github.com/maltejk/provider-jet-myrasec/internal/clients"
+	"github.com/maltejk/provider-jet-myrasec/internal/controller"
 )
 
 func main() {

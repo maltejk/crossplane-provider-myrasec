@@ -22,12 +22,12 @@ package apis
 import (
 	"k8s.io/apimachinery/pkg/runtime"
 
-	v1alpha1 "github.com/crossplane-contrib/provider-jet-myrasec/apis/cache/v1alpha1"
-	v1alpha1dns "github.com/crossplane-contrib/provider-jet-myrasec/apis/dns/v1alpha1"
-	v1alpha1ip "github.com/crossplane-contrib/provider-jet-myrasec/apis/ip/v1alpha1"
-	v1alpha1myrasec "github.com/crossplane-contrib/provider-jet-myrasec/apis/myrasec/v1alpha1"
-	v1alpha1apis "github.com/crossplane-contrib/provider-jet-myrasec/apis/v1alpha1"
-	v1alpha1waf "github.com/crossplane-contrib/provider-jet-myrasec/apis/waf/v1alpha1"
+	v1alpha1 "github.com/maltejk/provider-jet-myrasec/apis/cache/v1alpha1"
+	v1alpha1dns "github.com/maltejk/provider-jet-myrasec/apis/dns/v1alpha1"
+	v1alpha1ip "github.com/maltejk/provider-jet-myrasec/apis/ip/v1alpha1"
+	v1alpha1myrasec "github.com/maltejk/provider-jet-myrasec/apis/myrasec/v1alpha1"
+	v1alpha1apis "github.com/maltejk/provider-jet-myrasec/apis/v1alpha1"
+	v1alpha1waf "github.com/maltejk/provider-jet-myrasec/apis/waf/v1alpha1"
 )
 
 func init() {

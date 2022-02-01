@@ -23,7 +23,7 @@ import (
 
 const (
 	resourcePrefix = "myrasec"
-	modulePath     = "github.com/crossplane-contrib/provider-jet-myrasec"
+	modulePath     = "github.com/maltejk/provider-jet-myrasec"
 )
 
 // GetProvider returns provider configuration

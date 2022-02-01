@@ -8,12 +8,12 @@ MyraSec API.
 ## Getting Started
 
 Install the provider by using the following command after changing the image tag
-to the [latest release](https://github.com/crossplane-contrib/provider-jet-myrasec/releases):
+to the [latest release](https://github.com/maltejk/provider-jet-myrasec/releases):
 ```
 kubectl crossplane install provider crossplane/provider-jet-myrasec:v0.1.0
 ```
 
-You can see the API reference [here](https://doc.crds.dev/github.com/crossplane-contrib/provider-jet-myrasec).
+You can see the API reference [here](https://doc.crds.dev/github.com/maltejk/provider-jet-myrasec).
 
 ## Developing
 
@@ -55,7 +55,7 @@ make build
 ## Report a Bug
 
 For filing bugs, suggesting improvements, or requesting new features, please
-open an [issue](https://github.com/crossplane-contrib/provider-jet-myrasec/issues).
+open an [issue](https://github.com/maltejk/provider-jet-myrasec/issues).
 
 ## Contact
 
