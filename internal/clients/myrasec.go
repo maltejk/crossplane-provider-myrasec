@@ -31,13 +31,13 @@ import (
 )
 
 const (
-	apiKey    = "api_key"
-	apiSecret = "secret"
+	apiKey     = "api_key"
+	apiSecret  = "secret"
+	apiBaseURL = "api_base_url"
 
 	// MyraSec credentials environment variable names
-	envAPIKey     = "API_KEY"
-	envAPISecret  = "SECRET"
-	envAPIBaseURL = "http://localhost"
+	envAPIKey    = "MYRASEC_API_KEY"
+	envAPISecret = "MYRASEC_API_SECRET"
 )
 
 const (
@@ -92,6 +92,5 @@ func TerraformSetupBuilder(version, providerSource, providerVersion string) terr
 			fmt.Sprintf(fmtEnvVar, envAPISecret, myrasecCreds[apiSecret]),
 		}
 		return ps, nil
-
 	}
 }
