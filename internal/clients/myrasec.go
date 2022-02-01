@@ -35,12 +35,13 @@ const (
 	apiSecret = "secret"
 
 	// MyraSec credentials environment variable names
-	envAPIKey    = "API_KEY"
-	envAPISecret = "SECRET"
+	envAPIKey     = "API_KEY"
+	envAPISecret  = "SECRET"
+	envAPIBaseURL = "http://localhost"
 )
 
 const (
-	fmtEnvVar = "%s%s"
+	fmtEnvVar = "%s=%s"
 
 	// error messages
 	errNoProviderConfig     = "no providerConfigRef provided"
