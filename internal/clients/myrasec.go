@@ -86,6 +86,16 @@ func TerraformSetupBuilder(version, providerSource, providerVersion string) terr
 			return ps, errors.Wrap(err, errUnmarshalCredentials)
 		}
 
+		// provide api_base_url, as it's not accepted from env var
+		// https://github.com/Myra-Security-GmbH/terraform-provider-myrasec/blob/v1.20.0/myrasec/provider.go#L34
+		// untils this https://github.com/Myra-Security-GmbH/terraform-provider-myrasec/issues/28
+		// gets fixed
+		if myrasecCreds[apiBaseURL] != "" {
+			tfCfg := map[string]interface{}{}
+			tfCfg["api_base_url"] = myrasecCreds[apiBaseURL]
+			ps.Configuration = tfCfg
+		}
+
 		// set environment variables for sensitive provider configuration
 		ps.Env = []string{
 			fmt.Sprintf(fmtEnvVar, envAPIKey, myrasecCreds[apiKey]),
