@@ -127,6 +127,10 @@ type RuleParameters struct {
 	// +kubebuilder:validation:Optional
 	LogIdentifier *string `json:"logIdentifier,omitempty" tf:"log_identifier,omitempty"`
 
+	// The rule name identifies each rule.
+	// +kubebuilder:validation:Required
+	Name *string `json:"name" tf:"name,omitempty"`
+
 	// After a rule has been applied, the rule chain will be executed as determined.
 	// +kubebuilder:validation:Optional
 	ProcessNext *bool `json:"processNext,omitempty" tf:"process_next,omitempty"`

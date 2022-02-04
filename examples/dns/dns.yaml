@@ -1,7 +1,7 @@
 apiVersion: dns.myrasec.jet.crossplane.io/v1alpha1
 kind: Record
 metadata:
-  name: example
+  name: 1234567
 spec:
   forProvider:
     domainName: example.com

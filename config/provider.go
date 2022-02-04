@@ -19,6 +19,8 @@ package config
 import (
 	tjconfig "github.com/crossplane/terrajet/pkg/config"
 	"github.com/hashicorp/terraform-plugin-sdk/v2/helper/schema"
+
+	"github.com/maltejk/provider-jet-myrasec/config/dns"
 )
 
 const (
@@ -40,6 +42,7 @@ func GetProvider(resourceMap map[string]*schema.Resource) *tjconfig.Provider {
 
 	for _, configure := range []func(provider *tjconfig.Provider){
 		// add custom config functions
+		dns.Customize,
 	} {
 		configure(pc)
 	}

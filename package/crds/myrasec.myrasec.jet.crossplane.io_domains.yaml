@@ -65,12 +65,17 @@ spec:
                   autoUpdate:
                     description: Auto update flag for the domain.
                     type: boolean
+                  name:
+                    description: Domain name.
+                    type: string
                   paused:
                     description: Shows if Myra is paused for this domain.
                     type: boolean
                   pausedUntil:
                     description: Date until Myra will be automatically reactivated.
                     type: string
+                required:
+                - name
                 type: object
               providerConfigRef:
                 default:

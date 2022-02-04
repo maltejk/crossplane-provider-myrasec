@@ -116,6 +116,9 @@ spec:
                     description: A comment to identify the matching rule in the access
                       log.
                     type: string
+                  name:
+                    description: The rule name identifies each rule.
+                    type: string
                   processNext:
                     description: After a rule has been applied, the rule chain will
                       be executed as determined.
@@ -134,6 +137,7 @@ spec:
                 required:
                 - conditions
                 - direction
+                - name
                 - subdomainName
                 type: object
               providerConfigRef:
