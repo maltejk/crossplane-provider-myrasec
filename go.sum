@@ -60,8 +60,8 @@ github.com/Myra-Security-GmbH/myrasec-go v1.5.1 h1:9npG9sJmU4jORVBwgfB7cAK99N3BO
 github.com/Myra-Security-GmbH/myrasec-go v1.5.1/go.mod h1:Jw2kNmEsVT3keiJn0M+SaAQDGtxx7D3V0Nsb+MHfHz8=
 github.com/Myra-Security-GmbH/signature v0.0.0-20210212094602-405a72309036 h1:jHbXQ2rGSiuKhYDro1/xQnX4ajVqrxLlCBXuFyrslOY=
 github.com/Myra-Security-GmbH/signature v0.0.0-20210212094602-405a72309036/go.mod h1:2BZfINKNAlgIONp1zeT56ZAxDxjl4qOHz+JMdmYQuYE=
-github.com/Myra-Security-GmbH/terraform-provider-myrasec v1.20.0 h1:6ajqeazVYjVpTfaMr3af+QjT71o1vsUEblUIZbzvlIM=
-github.com/Myra-Security-GmbH/terraform-provider-myrasec v1.20.0/go.mod h1:utcYS5vGKz6yFHGm50VKGYbEdJoDZulTEAXKkub8sss=
+github.com/Myra-Security-GmbH/terraform-provider-myrasec v1.21.0 h1:i573/koXBmI+XlDhx2Kqbhs+WdCZlnuF0tOsmnVJCsk=
+github.com/Myra-Security-GmbH/terraform-provider-myrasec v1.21.0/go.mod h1:utcYS5vGKz6yFHGm50VKGYbEdJoDZulTEAXKkub8sss=
 github.com/NYTimes/gziphandler v0.0.0-20170623195520-56545f4a5d46/go.mod h1:3wb06e3pkSAbeQ52E9H9iFoQsEEwGN64994WTCIhntQ=
 github.com/NYTimes/gziphandler v1.1.1/go.mod h1:n/CVRwUEOgIxrgPvAQhUUr9oeUtvrhMomdKFjzJNB0c=
 github.com/OneOfOne/xxhash v1.2.2/go.mod h1:HSdplMjZKSmBqAxg5vPj2TmRDmfkzw+cTzAElWljhcU=
