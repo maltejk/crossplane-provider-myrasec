@@ -78,9 +78,6 @@ spec:
                   enabled:
                     description: Define wether this DNS record is enabled or not.
                     type: boolean
-                  name:
-                    description: Subdomain name of a DNS record.
-                    type: string
                   port:
                     description: Port for SRV records.
                     format: int64
@@ -144,7 +141,6 @@ spec:
                     type: string
                 required:
                 - domainName
-                - name
                 - recordType
                 - ttl
                 - value

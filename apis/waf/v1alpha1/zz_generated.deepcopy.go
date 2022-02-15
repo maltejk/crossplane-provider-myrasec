@@ -326,11 +326,6 @@ func (in *RuleParameters) DeepCopyInto(out *RuleParameters) {
 		*out = new(string)
 		**out = **in
 	}
-	if in.Name != nil {
-		in, out := &in.Name, &out.Name
-		*out = new(string)
-		**out = **in
-	}
 	if in.ProcessNext != nil {
 		in, out := &in.ProcessNext, &out.ProcessNext
 		*out = new(bool)

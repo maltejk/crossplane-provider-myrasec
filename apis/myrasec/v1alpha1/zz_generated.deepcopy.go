@@ -127,11 +127,6 @@ func (in *DomainParameters) DeepCopyInto(out *DomainParameters) {
 		*out = new(bool)
 		**out = **in
 	}
-	if in.Name != nil {
-		in, out := &in.Name, &out.Name
-		*out = new(string)
-		**out = **in
-	}
 	if in.Paused != nil {
 		in, out := &in.Paused, &out.Paused
 		*out = new(bool)

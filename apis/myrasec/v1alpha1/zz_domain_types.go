@@ -41,10 +41,6 @@ type DomainParameters struct {
 	// +kubebuilder:validation:Optional
 	AutoUpdate *bool `json:"autoUpdate,omitempty" tf:"auto_update,omitempty"`
 
-	// Domain name.
-	// +kubebuilder:validation:Required
-	Name *string `json:"name" tf:"name,omitempty"`
-
 	// Shows if Myra is paused for this domain.
 	// +kubebuilder:validation:Optional
 	Paused *bool `json:"paused,omitempty" tf:"paused,omitempty"`

@@ -147,11 +147,6 @@ func (in *RecordParameters) DeepCopyInto(out *RecordParameters) {
 		*out = new(bool)
 		**out = **in
 	}
-	if in.Name != nil {
-		in, out := &in.Name, &out.Name
-		*out = new(string)
-		**out = **in
-	}
 	if in.Port != nil {
 		in, out := &in.Port, &out.Port
 		*out = new(int64)
