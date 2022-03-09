@@ -14,7 +14,7 @@ require (
 	k8s.io/apimachinery v0.22.0
 	k8s.io/client-go v0.22.0
 	sigs.k8s.io/controller-runtime v0.9.6
-	sigs.k8s.io/controller-tools v0.6.2
+	sigs.k8s.io/controller-tools v0.8.0
 )
 
 // Comment out the line below instead of the above, if your Terraform provider
