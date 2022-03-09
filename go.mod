@@ -3,7 +3,7 @@ module github.com/crossplane-contrib/provider-jet-myrasec
 go 1.16
 
 require (
-	github.com/Myra-Security-GmbH/terraform-provider-myrasec v1.19.0
+	github.com/Myra-Security-GmbH/terraform-provider-myrasec v1.26.3
 	github.com/crossplane/crossplane-runtime v0.15.1-0.20211004150827-579c1833b513
 	github.com/crossplane/crossplane-tools v0.0.0-20210916125540-071de511ae8e
 	github.com/crossplane/terrajet v0.3.2
