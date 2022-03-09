@@ -11,7 +11,7 @@ require (
 	github.com/pkg/errors v0.9.1
 	go.uber.org/multierr v1.7.0 // indirect
 	gopkg.in/alecthomas/kingpin.v2 v2.2.6
-	k8s.io/apimachinery v0.22.0
+	k8s.io/apimachinery v0.23.4
 	k8s.io/client-go v0.22.0
 	sigs.k8s.io/controller-runtime v0.9.6
 	sigs.k8s.io/controller-tools v0.6.2
